@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Gallery Room</title>
+    <link rel="stylesheet" href="external.css">
+</head>
+<body>
+    <header class="menu-header">
+        <nav>
+            <button class="menu-button" onclick="window.location.href='picasso.html'">Main Page</button>
+        </nav>
+    </header>
+
+    <div class="gallery-container">
+        <div class="sky">
+            <div class="sun"></div>
+            <div class="planet pink"></div>
+            <div class="planet red"></div>
+            <div class="planet yellow"></div>
+        </div>
+        <div class="mountains">
+            <div class="mountain green"></div>
+            <div class="mountain yellow"></div>
+        </div>
+        <div class="people">
+            <div class="person" style="z-index: 10;"></div>
+            <div class="person" style="z-index: 10;"></div>
+            <div class="person" style="z-index: 10;"></div>
+            <div class="person" style="z-index: 10;"></div>
+            <div class="person" style="z-index: 10;"></div>
+            <div class="person" style="z-index: 10;"></div>
+            <div class="person" style="z-index: 10;"></div>
+            <div class="person" style="z-index: 10;"></div>
+        </div>
+        <div class="gallery-rectangles">
+            <div class="rectangle teal"></div>
+            <div class="rectangle teal"></div>
+            <div class="rectangle teal"></div>
+        </div>
+        <div class="ground"></div>
+    </div>
+
+    <div class="form-container">
+        <h2>Register for Virtual Gallery</h2>
+        <form action="formsubmitted.html" method="GET">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

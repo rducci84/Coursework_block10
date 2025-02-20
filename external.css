@@ -1,0 +1,303 @@
+/* Reset default margins and ensure box-sizing is consistent */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles with pixel units for base sizing */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Menu header with Flexbox and percentage units */
+.menu-header {
+    width: 100%;
+    padding: 1rem 20px;
+    background-color: #afafaf; /* Matches sky blue for consistency */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-header nav {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.menu-header .menu-button {
+    padding: 1rem 2rem; /* Increased size */
+    background-color: #af8b4c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem; /* Increased font size */
+    text-decoration: none;
+}
+
+.menu-header .menu-button:hover {
+    background-color: #45a049;
+}
+
+/* Gallery container using Flexbox with percentage units for flexibility */
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-color: #87ceeb; /* Sky blue background */
+}
+
+/* Sky section with hierarchical selectors */
+.gallery-container .sky {
+    width: 100%;
+    height: 40vh;
+    background-color: #87ceeb;
+    position: relative;
+    z-index: 1;
+}
+
+/* Sun with rem units for sizing */
+.gallery-container .sky .sun {
+    width: 8rem;
+    height: 8rem;
+    background-color: #ffd700;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 5;
+}
+
+/* Planets with z-index for layering */
+.gallery-container .sky .planet {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+}
+
+.gallery-container .sky .pink {
+    width: 4rem;
+    height: 4rem;
+    background-color: #ff69b4;
+    top: 20%;
+    left: 30%;
+}
+
+.gallery-container .sky .red {
+    width: 2rem;
+    height: 2rem;
+    background-color: #ff0000;
+    top: 15%;
+    left: 50%;
+}
+
+.gallery-container .sky .yellow {
+    width: 3rem;
+    height: 3rem;
+    background-color: #ffff00;
+    top: 25%;
+    left: 70%;
+}
+
+/* Mountains section */
+.gallery-container .mountains {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.gallery-container .mountains .mountain {
+    width: 0;
+    height: 0;
+    border-left: 10rem solid transparent;
+    border-right: 10rem solid transparent;
+    position: relative;
+}
+
+.gallery-container .mountains .green {
+    border-bottom: 15rem solid #2e8b57;
+    z-index: 4;
+}
+
+.gallery-container .mountains .yellow {
+    border-bottom: 12rem solid #adff2f;
+    z-index: 3;
+}
+
+/* People section with z-index for layering */
+.gallery-container .people {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.gallery-container .people .person {
+    width: 2rem;
+    height: 4rem;
+    background-color: #333;
+    border-radius: 50% 50% 0 0;
+}
+
+/* Gallery rectangles */
+.gallery-container .gallery-rectangles {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-container .gallery-rectangles .rectangle {
+    width: 20%;
+    height: 100%;
+    background-color: #008080;
+}
+
+/* Ground section */
+.gallery-container .ground {
+    width: 100%;
+    height: 5vh;
+    background-color: #a9a9a9;
+    position: relative;
+    z-index: 0;
+}
+
+/* Form container with Flexbox for responsiveness */
+.form-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 2px solid #000;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-container label {
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    padding: 0.75rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design with media queries */
+@media screen and (max-width: 1024px) { /* iPad and smaller desktops */
+    .gallery-container .sky {
+        height: 30vh;
+    }
+
+    .gallery-container .mountains {
+        height: 15vh;
+    }
+
+    .gallery-container .people {
+        height: 8vh;
+    }
+
+    .gallery-container .gallery-rectangles {
+        height: 12vh;
+    }
+
+    .gallery-container .ground {
+        height: 4vh;
+    }
+
+    .form-container {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) { /* Mobile */
+    .gallery-container {
+        padding: 10px;
+    }
+
+    .gallery-container .sky {
+        height: 20vh;
+    }
+
+    .gallery-container .mountains {
+        height: 10vh;
+    }
+
+    .gallery-container .people {
+        height: 6vh;
+    }
+
+    .gallery-container .gallery-rectangles {
+        height: 8vh;
+    }
+
+    .gallery-container .ground {
+        height: 3vh;
+    }
+
+    .gallery-container .mountains .mountain {
+        border-left: 5rem solid transparent;
+        border-right: 5rem solid transparent;
+    }
+
+    .gallery-container .mountains .green {
+        border-bottom: 8rem solid #2e8b57;
+    }
+
+    .gallery-container .mountains .yellow {
+        border-bottom: 6rem solid #adff2f;
+    }
+
+    .form-container {
+        max-width: 300px;
+        padding: 1rem;
+    }
+
+    .form-container button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
