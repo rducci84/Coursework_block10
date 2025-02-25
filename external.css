@@ -1,11 +1,10 @@
-/* Reset default margins and ensure box-sizing is consistent */
+/* Default margins */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles with pixel units for base sizing */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -13,11 +12,10 @@ body {
     padding: 20px;
 }
 
-/* Menu header with Flexbox and percentage units */
 .menu-header {
     width: 100%;
     padding: 1rem 20px;
-    background-color: #afafaf; /* Matches sky blue for consistency */
+    background-color: #afafaf;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -32,13 +30,13 @@ body {
 }
 
 .menu-header .menu-button {
-    padding: 1rem 2rem; /* Increased size */
+    padding: 1rem 2rem; 
     background-color: #af8b4c;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1.2rem; /* Increased font size */
+    font-size: 1.2rem; 
     text-decoration: none;
 }
 
@@ -46,7 +44,6 @@ body {
     background-color: #45a049;
 }
 
-/* Gallery container using Flexbox with percentage units for flexibility */
 .gallery-container {
     display: flex;
     flex-direction: column;
@@ -54,10 +51,9 @@ body {
     max-width: 100%;
     margin: 0 auto;
     position: relative;
-    background-color: #87ceeb; /* Sky blue background */
+    background-color: #87ceeb;
 }
 
-/* Sky section with hierarchical selectors */
 .gallery-container .sky {
     width: 100%;
     height: 40vh;
@@ -66,7 +62,6 @@ body {
     z-index: 1;
 }
 
-/* Sun with rem units for sizing */
 .gallery-container .sky .sun {
     width: 8rem;
     height: 8rem;
@@ -78,7 +73,6 @@ body {
     z-index: 5;
 }
 
-/* Planets with z-index for layering */
 .gallery-container .sky .planet {
     border-radius: 50%;
     position: absolute;
@@ -109,7 +103,6 @@ body {
     left: 70%;
 }
 
-/* Mountains section */
 .gallery-container .mountains {
     width: 100%;
     height: 20vh;
@@ -138,7 +131,6 @@ body {
     z-index: 3;
 }
 
-/* People section with z-index for layering */
 .gallery-container .people {
     width: 100%;
     height: 10vh;
@@ -157,7 +149,6 @@ body {
     border-radius: 50% 50% 0 0;
 }
 
-/* Gallery rectangles */
 .gallery-container .gallery-rectangles {
     width: 100%;
     height: 15vh;
@@ -174,7 +165,6 @@ body {
     background-color: #008080;
 }
 
-/* Ground section */
 .gallery-container .ground {
     width: 100%;
     height: 5vh;
@@ -183,7 +173,6 @@ body {
     z-index: 0;
 }
 
-/* Form container with Flexbox for responsiveness */
 .form-container {
     max-width: 500px;
     margin: 2rem auto;
@@ -226,8 +215,8 @@ body {
     background-color: #45a049;
 }
 
-/* Responsive design with media queries */
-@media screen and (max-width: 1024px) { /* iPad and smaller desktops */
+/* iPad and smaller screens */
+@media screen and (max-width: 1024px) { 
     .gallery-container .sky {
         height: 30vh;
     }
@@ -253,7 +242,8 @@ body {
     }
 }
 
-@media screen and (max-width: 480px) { /* Mobile */
+/* Mobile */
+@media screen and (max-width: 480px) { 
     .gallery-container {
         padding: 10px;
     }
